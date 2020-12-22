@@ -1,0 +1,199 @@
+
+.material-half-bg {
+  height: 100vh;
+  background-color: #e7e7e7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.material-half-bg .cover {
+  background-color: #009688;
+  height: 50vh;
+}
+
+.m-loader {
+  position: relative;
+  width: 40px;
+}
+
+.m-loader:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.m-circular {
+  -webkit-animation: rotate 1.5s linear infinite;
+          animation: rotate 1.5s linear infinite;
+  height: 100%;
+  -webkit-transform-origin: center center;
+      -ms-transform-origin: center center;
+          transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.path {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  stroke: #009688;
+  -webkit-animation: dash 1.5s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+.btn-spinner {
+  display: inline-block;
+  z-index: 2000;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+  border: solid 2px transparent;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-radius: 10px;
+  -webkit-animation: bSpinner 0.8s linear infinite;
+          animation: bSpinner 0.8s linear infinite;
+}
+
+.login-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+
+.login-content .logo {
+  margin-bottom: 40px;
+  font-family: "Niconne";
+  color: #fff;
+}
+
+.login-content .logo h1 {
+  font-size: 52px;
+  font-weight: 400;
+}
+
+.login-content .login-box {
+  position: relative;
+  min-width: 350px;
+  min-height: 390px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 29px 147.5px 102.5px rgba(0, 0, 0, 0.05), 0px 29px 95px 0px rgba(0, 0, 0, 0.16);
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.login-content .login-box .login-head {
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.login-content .login-box label {
+  color: #666;
+  font-weight: 700;
+}
+
+.login-content .login-box .utility {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-content .login-box .btn-container {
+  margin-bottom: 0;
+}
+
+.login-content .login-box .login-form, .login-content .login-box .forget-form {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 40px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.login-content .login-box .forget-form {
+  opacity: 0;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.login-content .login-box.flipped {
+  min-height: 300px;
+}
+
+.login-content .login-box.flipped .login-form {
+  opacity: 0;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.login-content .login-box.flipped .forget-form {
+  opacity: 1;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+@media (max-width: 351px) {
+  .login-content .login-box {
+    min-width: 100%;
+  }
+  .login-content .login-box .login-form, .login-content .login-box .forget-form {
+    width: 100%;
+  }
+}
+
+.signin_btn{
+      color: #FFF;
+    background-color: #009688;
+    border-color: #009688;
+    transition: all 0.1s ease-in-out;
+}
+  .signin_btn:hover{
+    color: #FFF;
+    background-color: #007065;
+    border-color: #00635a;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+    transform: translate3d(0, -1px, 0);
+    }  

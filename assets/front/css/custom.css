@@ -1,0 +1,13 @@
+.doctor_logo{
+    background-color: #fafafa;
+}
+
+.doctor_logo .navbar-brand {
+    color: #000;
+}
+
+@media only screen and (max-width: 600px){
+    a.navbar-brand {
+        padding: 20px;
+    }
+}
