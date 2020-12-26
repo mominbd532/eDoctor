@@ -28,38 +28,15 @@
               <a class="navbar-brand" href="<?php echo base_url('site');?>">e<span>Doctor</span></a>
           </div>
           <div class="col-md-10">
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light float-md-right">
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span> Menu
                   </button>
-                  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                  <div class="collapse navbar-collapse float-md-right" id="navbarTogglerDemo01">
 
-                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                          <li class="nav-item pr-3 d-flex topper align-items-center">
-<!--                              <a class="nav-link" href="#">Home</a>-->
-                              <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
-                              <span class="text"><?php echo $this->security->xss_clean(htmlspecialchars($site_details['address'])); ?></span>
-                          </li>
-                          <li class="nav-item pr-3 d-flex topper align-items-center">
-                              <!--                              <a class="nav-link" href="#">Home</a>-->
-                              <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-                              <span class="text"><?php echo $this->security->xss_clean(htmlspecialchars($site_details['email'])); ?></span>
+                      <p class="button-custom order-lg-last mt-2 mb-2 pr-lg-5 float-right"><a href="<?php echo base_url('doctor/register');?>" class="btn btn-success py-2 px-3">Become Doctor</a></p>
+                      <p class="button-custom order-lg-last mt-2 mb-2 float-md-right"><a href="<?php echo base_url('patient/register');?>" class="btn btn-secondary py-2 px-3">Become Patient</a></p>
 
-                          </li>
-                          <li class="nav-item d-flex topper align-items-center">
-                              <!--                              <a class="nav-link" href="#">Home</a>-->
-                              <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-                                  <span class="icon-phone2"></span>
-                              </div>
-                              <span class="text"><?php echo $this->security->xss_clean(htmlspecialchars($site_details['user_phone'])); ?></span>
-
-                          </li>
-
-                      </ul>
-
-                      <form class="form-inline my-2 my-lg-0">
-                          <p class="button-custom order-lg-last mb-0"><a href="<?php echo base_url('patient/register');?>" class="btn btn-secondary py-2 px-3">Become Patient</a></p>
-                      </form>
                   </div>
               </nav>
           </div>
@@ -69,31 +46,40 @@
 
   </section>
 
-    <section class="home-slider owl-carousel">
-      	<div class="slider-item" style="background-image:url(assets/front/images/bg_1.jpg);" data-stellar-background-ratio="0.5">
-      		<div class="overlay"></div>
-        	<div class="container">
-          		<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-          			<div class="col-md-6 text ftco-animate">
-            			<h1 class="mb-4">Helping Your <span>Stay Happy One</span></h1>
-            			<h3 class="subheading">Everyday We Bring Hope and Smile to the Patient We Serve</h3>
-          			</div>
-        		</div>
-        	</div>
-      	</div>
+  <section class="edoctor_slider">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          </ol>
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img class="d-block w-100" src="<?php echo base_url('assets/front/images/bg_1.jpg'); ?>" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block w-100" src="<?php echo base_url('assets/front/images/bg_2.jpg'); ?>" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block w-100" src="<?php echo base_url('assets/front/images/bg_3.jpg'); ?>" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                  <img class="d-block w-100" src="<?php echo base_url('assets/front/images/bg_4.jpg'); ?>" alt="Fourth slide">
+              </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+          </a>
+      </div>
 
-      	<div class="slider-item" style="background-image:url(assets/front/images/bg_2.jpg);">
-      		<div class="overlay"></div>
-        	<div class="container">
-          		<div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
-          			<div class="col-md-6 text ftco-animate">
-						<h1 class="mb-4">We Care <span>About Your Health</span></h1>
-						<h3 class="subheading">Your Health is Our Top Priority with Comprehensive, Affordable medical.</h3>
-					</div>
-        		</div>
-        	</div>
-      	</div>
-    </section>
+  </section>
+
 
     <section class="ftco-services ftco-no-pb">
 		<div class="container">
@@ -527,41 +513,6 @@
     	</div>
     </section>
 		
-	<section class="ftco-section ftco-no-pt">
-		<div class="container">
-			<div class="row justify-content-center mb-5 pb-2">
-				<div class="col-md-8 text-center heading-section ftco-animate">
-					<span class="subheading">Doctors</span>
-					<h2 class="mb-4">Our Qualified Doctors</h2>
-				</div>
-			</div>
-			<div class="row">
-				<?php foreach ( $doctors as $doctor ) : ?>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<div class="staff">
-						<div class="img-wrap d-flex align-items-stretch">
-							<div class="img align-self-stretch" style="background-image: url(assets/images/<?php echo $this->security->xss_clean(htmlspecialchars($doctor['doctor_photo'])); ?>);"></div>
-						</div>
-						<div class="text pt-3 text-center">
-							<h3><?php echo $this->security->xss_clean(htmlspecialchars($doctor['doctor_name'])); ?></h3>
-							<span class="position mb-2"><?php echo $this->security->xss_clean(htmlspecialchars($doctor['doctor_phone'])); ?></span>
-							<div class="faded">
-								<p><?php echo $this->security->xss_clean(htmlspecialchars($doctor['doctor_designation'])); ?></p>
-							</div>
-								<div class="faded">
-								<p><?php echo $this->security->xss_clean(htmlspecialchars($doctor['doctor_qualification'])); ?></p>
-							</div>
-								<div class="faded">
-								<p><?php echo $this->security->xss_clean(htmlspecialchars($doctor['doctor_hospital'])); ?></p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<?php endforeach; ?>
-				</div>
-			</div>
-		</div>
-	</section>
 
 		<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter" style="background-image: url(assets/front/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
     	<div class="container">
@@ -656,6 +607,7 @@
 				</div>
 				<div class="col-md-6 pr-3 d-flex topper align-items-center">
                     <p class="button-custom order-lg-last mb-0" style="padding-left: 67%;padding-bottom: 1%;"><a href="<?php echo base_url('doctor/register');?>" class="btn btn-secondary py-2 px-3">Become Doctor</a></p>
+
                 </div>
     		</div>
       	</div>

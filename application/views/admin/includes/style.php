@@ -21,6 +21,9 @@
                     <li class="nav-item">
                         <a href="<?php echo base_url('admin/doctors');?>"> <span class="pcoded-micon"><i class="mdi mdi-account-multiple"></i></span><span class="pcoded-mtext">Doctors</span></a>
                     </li>
+                    <li class="nav-item">
+                        <a href="<?php echo base_url('admin/medicines');?>"> <span class="pcoded-micon"><i class="mdi mdi-account-multiple"></i></span><span class="pcoded-mtext">Medicines</span></a>
+                    </li>
                 </ul>
                 </div>
         </div>		

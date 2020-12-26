@@ -204,4 +204,16 @@ class Admin extends CI_Controller {
 		$data['site_details'] = $this->admin_mo->site_details();
 		$this->load->view('admin/printinvoice',$data);
 	}
+
+    public function medicines()
+    {
+        if(!isset($_SESSION['userinfo'])){
+            redirect(base_url().'admin');
+        }
+        $data['title'] = "Doctor List";
+        $data['info'] = $this->admin_mo->medicine_info_list();
+        $data['site_details'] = $this->admin_mo->site_details();
+        $this->load->view('admin/medicine',$data);
+
+    }
 }

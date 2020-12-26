@@ -21,52 +21,29 @@
 
   </head>
   <body>
-    <section class="nav-section">
+  <section class="nav-section">
       <div class="row align-items-center doctor_logo">
           <div class="col-md-2 pl-lg-5 align-items-center">
               <a class="navbar-brand" href="<?php echo base_url('site');?>">e<span>Doctor</span></a>
           </div>
           <div class="col-md-10">
-              <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <nav class="navbar navbar-expand-lg navbar-light bg-light float-md-right">
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="navbar-toggler-icon"></span> Menu
                   </button>
-                  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                  <div class="collapse navbar-collapse float-md-right" id="navbarTogglerDemo01">
 
-                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                          <li class="nav-item pr-3 d-flex topper align-items-center">
-                              <!--                              <a class="nav-link" href="#">Home</a>-->
-                              <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-map"></span></div>
-                              <span class="text"><?php echo $this->security->xss_clean(htmlspecialchars($site_details['address'])); ?></span>
-                          </li>
-                          <li class="nav-item pr-3 d-flex topper align-items-center">
-                              <!--                              <a class="nav-link" href="#">Home</a>-->
-                              <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-                              <span class="text"><?php echo $this->security->xss_clean(htmlspecialchars($site_details['email'])); ?></span>
+                      <p class="button-custom order-lg-last mt-2 mb-2 pr-lg-5 float-right"><a href="<?php echo base_url('doctor/register');?>" class="btn btn-success py-2 px-3">Become Doctor</a></p>
+                      <p class="button-custom order-lg-last mt-2 mb-2 float-md-right"><a href="<?php echo base_url('patient/register');?>" class="btn btn-secondary py-2 px-3">Become Patient</a></p>
 
-                          </li>
-                          <li class="nav-item d-flex topper align-items-center">
-                              <!--                              <a class="nav-link" href="#">Home</a>-->
-                              <div class="icon bg-white mr-2 d-flex justify-content-center align-items-center">
-                                  <span class="icon-phone2"></span>
-                              </div>
-                              <span class="text"><?php echo $this->security->xss_clean(htmlspecialchars($site_details['user_phone'])); ?></span>
-
-                          </li>
-
-                      </ul>
-
-                      <form class="form-inline my-2 my-lg-0">
-                          <p class="button-custom order-lg-last mb-0"><a href="<?php echo base_url('patient/register');?>" class="btn btn-secondary py-2 px-3">Become Patient</a></p>
-                      </form>
                   </div>
               </nav>
           </div>
       </div>
 
-
-
   </section>
+
+
 
     <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter" style="background-image: url(../assets/front/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
     	<div class="container">

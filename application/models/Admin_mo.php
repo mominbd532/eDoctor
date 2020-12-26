@@ -225,6 +225,14 @@ class Admin_mo extends CI_Model {
 		return $data->result_array();
 	}
 
+    public function medicine_info_list()
+    {
+        $this->db->select('*');
+        $this->db->from('medicines');
+        $data = $this->db->get();
+        return $data->result_array();
+    }
+
 	public function doctor_info()
 	{
 		$this->db->select('*');
