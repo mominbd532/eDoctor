@@ -532,4 +532,31 @@ class Admin_mo extends CI_Model {
 
 		return $adminDetails[0];;
 	}
+
+	public function save_medicine($data){
+        $this->db->insert('medicines', $data);
+    }
+
+    public function medicineInfo($id){
+        $this->db->select('*');
+        $this->db->from('medicines');
+        $this->db->where('medicine_id',$id);
+        $qresule=$this->db->get();
+        $result =$qresule->row();
+        return $result;
+    }
+
+    public function update_medicine($data){
+        $this->db->set('name',$data['name']);
+        $this->db->set('generic_name',$data['generic_name']);
+        $this->db->set('company_name',$data['company_name']);
+        $this->db->where('medicine_id',$data['medicine_id']);
+        $this->db->update('medicines');
+
+    }
+
+    public function delete_medicine($medicineId){
+        $this->db->where('medicine_id',$medicineId);
+        $this->db->delete('medicines');
+    }
 }

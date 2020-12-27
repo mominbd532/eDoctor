@@ -86,7 +86,7 @@
                                                                         <select class="select xxx" id="myselect2" name="medicine_name[]" required="">
                                                                             <option value="">Select</option>
                                                                             <?php foreach ( $medicines as $data ) : ?>
-                                                                            <option value="<?php echo $data['name']; ?>"><?php echo $this->security->xss_clean(htmlspecialchars($data['name'])); ?></option>
+                                                                            <option value="<?php echo $data['name']; ?>"><?php echo $this->security->xss_clean(htmlspecialchars($data['name'])) ." - ".$this->security->xss_clean(htmlspecialchars($data['generic_name'])) ." - ".$this->security->xss_clean(htmlspecialchars($data['company_name'])); ?></option>
                                                                             <?php endforeach; ?>
                                                                         </select>
                                                                         <?php if($error['medicine_name']){?> <span class="text-danger"><?php echo $error['medicine_name']; ?></span> <?php } ?>

@@ -24,7 +24,51 @@ include_once('includes/header.php');
                                     <li class="breadcrumb-item active">Patient</li>
                                 </ol>
                             </div>
-                            <h4 class="page-title">Medicine List</h4>
+                            <h4 class="page-title">Medicine List</h4> <br>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#medicineModal">
+                                Add Medicine
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="medicineModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Add New Medicine</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form action="<?php echo base_url('admin/add_medicine');?>" method="post">
+                                                <div class="form-group">
+                                                    <label for="medicine_name">Medicine Name</label>
+                                                    <input type="text" name="name" class="form-control" id="medicine_name" placeholder="Enter Medicine Name" required="required" >
+
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="generic_name">Generic Name</label>
+                                                    <input type="text" name="generic_name" class="form-control" id="generic_name" placeholder="Enter Generic Name" required="required" >
+
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="company_name">Company Name</label>
+                                                    <input type="text" name="company_name" class="form-control" id="company_name" placeholder="Enter Company Name" required="required" >
+
+                                                </div>
+
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </form>
+
+                                        </div>
+                                        <div class="modal-footer">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -62,13 +106,15 @@ include_once('includes/header.php');
 
                                                 <td>
 
-                                                        <a href="javascript:void(0);" onclick="deletes(<?php echo $data['medicine_id'];?>);"><button type="button" class="btn btn-1d btn-sm btn-outline-primary waves-effect waves-light"><span class="mdi mdi-delete"></span></button></a>
+                                                      <a href="<?php echo base_url('admin/edit_medicine/').$data['medicine_id'];?>" class="btn btn-1d btn-sm btn-outline-primary waves-effect waves-light" title="Edit Medicine"><span class="mdi mdi-pencil"></span></a>
+                                                    <a href="javascript:void(0);" onclick="deletes(<?php echo $data['medicine_id'];?>);"><button type="button" class="btn btn-1d btn-sm btn-outline-primary waves-effect waves-light"><span class="mdi mdi-delete"></span></button></a>
+
                                                         <script type="text/javascript">
                                                             var url="<?php echo base_url();?>";
                                                             function deletes(id){
                                                                 var r=confirm("Do you want to delete this?")
                                                                 if (r==true)
-                                                                    window.location = url+"adminpost/deletedoctor/"+id;
+                                                                    window.location = url+"admin/delete_medicine/"+id;
                                                                 else
                                                                     return false;
                                                             }

@@ -10,8 +10,8 @@
                     <a href="<?php echo base_url('admin/appointment');?>"><span class="pcoded-micon"><i class="mdi mdi-calendar-clock"></i></span><span class="pcoded-mtext">Appointment</span></a>
                     </li>		
                     <li class="nav-item">
-                    <a href="<?php echo base_url('admin/prescription');?>"> <span class="pcoded-micon"><i class="mdi mdi-clipboard-text"></i></span><span class="pcoded-mtext">Prescription</span></a>
-                    </li>
+<!--                    <a href="--><?php //echo base_url('admin/prescription');?><!--"> <span class="pcoded-micon"><i class="mdi mdi-clipboard-text"></i></span><span class="pcoded-mtext">Prescription</span></a>-->
+<!--                    </li>-->
                     <li class="nav-item">
                     <a href="<?php echo base_url('admin/billing');?>"><span class="pcoded-micon"> <i class="mdi mdi-script"></i></span><span class="pcoded-mtext">Billing</span></a> 
                     </li>

@@ -216,4 +216,36 @@ class Admin extends CI_Controller {
         $this->load->view('admin/medicine',$data);
 
     }
+
+    public function add_medicine()
+    {
+       $data['name'] = $this->input->post('name');
+       $data['generic_name'] = $this->input->post('generic_name');
+       $data['company_name'] = $this->input->post('company_name');
+
+       $this->admin_mo->save_medicine($data);
+
+        redirect("admin/medicines");
+    }
+
+    public function edit_medicine($id){
+        $data['medicine_info']=$this->admin_mo->medicineInfo($id);
+        $data['site_details'] = $this->admin_mo->site_details();
+        $this->load->view('admin/edit_medicine',$data);
+    }
+
+    public function update_medicine($medicineId){
+	    $data['medicine_id'] = $medicineId;
+	    $data['name'] =$this->input->post('name');
+	    $data['generic_name'] =$this->input->post('generic_name');
+	    $data['company_name'] =$this->input->post('company_name');
+        $this->admin_mo->update_medicine($data);
+        redirect("admin/medicines");
+
+    }
+
+    public function delete_medicine($id){
+        $this->admin_mo->delete_medicine($id);
+        redirect("admin/medicines");
+    }
 }

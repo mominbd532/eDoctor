@@ -4076,7 +4076,7 @@ strong {
     content: "\e88d";
 }
 label{
-    color: #fff;
+    color: #000;
 }
 @media (min-width: 768px){
     .navbar{
@@ -4153,4 +4153,5 @@ label{
     margin:0px;
     border-top:unset;
 }
+
 
